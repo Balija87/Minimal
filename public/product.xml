@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products>
+    <product>
+        <imgLink>https://via.placeholder.com/150</imgLink>
+        <name>Naziv Proizvoda 1</name>
+        <opis>Ovo je kratak opis proizvoda 1.</opis>
+        <cena>1000</cena>
+    </product>
+    <product>
+        <imgLink>https://via.placeholder.com/150</imgLink>
+        <name>Naziv Proizvoda 2</name>
+        <opis>Ovo je kratak opis proizvoda 2.</opis>
+        <cena>2000</cena>
+    </product>
+</products>

@@ -1,0 +1,31 @@
+footer {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.visible {
+  opacity: 1;
+}
+
+footer:not(.visible) {
+  opacity: 0;
+}
+
+/* Osnovni stilovi za telo stranice */
+body {
+  margin: 0;
+  padding-bottom: 60px; /* Povećajte ovo ako je footer viši */
+}
+
+/* Dodajte razmak između sadržaja i footera */
+.content {
+  min-height: calc(100vh - 60px); /* Visina viewport-a minus visina footera */
+}

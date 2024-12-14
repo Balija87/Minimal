@@ -1,0 +1,160 @@
+.main-content {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+h2, h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Razmak između okvira */
+    flex-wrap: wrap; /* Omogućava prelazak u sledeći red na manjim ekranima */
+}
+.text {
+    font-family: 'Liberty';
+    font-weight: 100;
+    font-size: 7rem;
+    letter-spacing: -0.25em;
+    flex-flow: row;
+}
+
+.letter {
+    color: #d9fdff;
+    text-shadow: 0 0 2rem #00f0ff;
+    display: inline-block;
+}
+
+.letter-2 {
+    transform: translate(-0.2rem, 1rem) rotate(10deg);
+    -webkit-animation: flicker 2s ease-in-out infinite alternate;
+            animation: flicker 2s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes flicker {
+    0% {
+        opacity: 1;
+        transform: translate(-0.2rem, 1rem) rotate(10deg);
+    }
+    5% {
+        opacity: 1;
+        transform: translate(-0.2rem, 1rem) rotate(10deg);
+    }
+    5.5% {
+        opacity: 0;
+        transform: translate(-0.2rem, 1rem) rotate(10deg);
+    }
+    6% {
+        opacity: 1;
+        transform: translate(-0.2rem, 1rem) rotate(10deg);
+    }
+    6.5% {
+        opacity: 1;
+        transform: translate(-0.2rem, 1rem) rotate(10deg);
+    }
+    7% {
+        opacity: 0;
+        transform: translate(-0.2rem, 1rem) rotate(10deg);
+    }
+    8% {
+        opacity: 1;
+        transform: translate(-0.2rem, 1rem) rotate(10deg);
+    }
+    50% {
+        opacity: 1;
+        transform: translate(-0.2rem, 1rem) rotate(13deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-0.2rem, 1rem) rotate(10deg);
+    }
+}
+
+@keyframes flicker {
+    0% {
+        opacity: 1;
+        transform: translate(-0.2rem, 1rem) rotate(10deg);
+    }
+    5% {
+        opacity: 1;
+        transform: translate(-0.2rem, 1rem) rotate(10deg);
+    }
+    5.5% {
+        opacity: 0;
+        transform: translate(-0.2rem, 1rem) rotate(10deg);
+    }
+    6% {
+        opacity: 1;
+        transform: translate(-0.2rem, 1rem) rotate(10deg);
+    }
+    6.5% {
+        opacity: 1;
+        transform: translate(-0.2rem, 1rem) rotate(10deg);
+    }
+    7% {
+        opacity: 0;
+        transform: translate(-0.2rem, 1rem) rotate(10deg);
+    }
+    8% {
+        opacity: 1;
+        transform: translate(-0.2rem, 1rem) rotate(10deg);
+    }
+    50% {
+        opacity: 1;
+        transform: translate(-0.2rem, 1rem) rotate(13deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-0.2rem, 1rem) rotate(10deg);
+    }
+}
+.frame {
+    width: 100%;
+    max-width: 300px; /* Maksimalna širina okvira */
+    height: 200px; /* Visina okvira */
+    border: 2px solid #333;
+    border-radius: 10px; /* Zaobljeni uglovi */
+    overflow: hidden; /* Osećaj za slike da ne izlaze iz okvira */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.frame img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover; /* Slika se automatski prilagođava u okvir */
+}
+
+.frame h4 {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6); /* Poluprovidna pozadina za tekst */
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .image-container {
+        justify-content: center;
+        gap: 10px; /* Manji razmak na manjim ekranima */
+    }
+
+    .frame {
+        max-width: 100%; /* Na manjim ekranima, okvir se širi na celu širinu */
+        height: 180px;
+    }
+}

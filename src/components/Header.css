@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+    position: relative;
+    border-radius: 5px;
+}
+
+
+
+.marker-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.logo {
+    color: white;
+    padding: 2px;
+    font-size: 24px;
+    flex-grow: 1;
+}
+
+.navbar {
+    position: relative;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+
+@-webkit-keyframes moveInOut {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px); /* Pomeranje prema vama */
+    }
+  }
+
+
+@keyframes moveInOut {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px); /* Pomeranje prema vama */
+    }
+  }
+  
+  .animate-move-in-out {
+    -webkit-animation: moveInOut 2s ease-in-out infinite;
+            animation: moveInOut 2s ease-in-out infinite;
+  }
+
+.animate-spin-slow {
+  -webkit-animation: spin 5s linear infinite;
+          animation: spin 5s linear infinite;
+}
+
+/* Osnovni stilovi za burger meni */
+.burger {
+    display: none; /* Sakriveno na većim ekranima */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 35px;
+    height: 16px;
+    cursor: pointer;
+    z-index: 2; /* Ispred menija */
+    position: relative; /* Poboljšanje pozicioniranja */
+}
+
+.burger span {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #e64e4e;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+}
+
+/* Transformacija za "X" */
+.burger.open span:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+}
+
+.burger.open span:nth-child(2) {
+    opacity: 0; /* Sakrij srednju liniju */
+}
+
+.burger.open span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+}
+
+
+/* Responsive Stilovi */
+@media (max-width: 768px) {
+    .burger {
+        display: flex; /* Prikaži burger meni na manjim ekranima */
+    }
+
+    .nav-links {
+        display: none; /* Početno stanje - sakriveno */
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 100vw;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        z-index: 1; /* Stavite iza burger ikone */
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .nav-links li {
+        margin: 20px 0; /* Razmak između linkova */
+    }
+    .nav-links.active li {
+        display: block;
+        margin: 20px 0; /* Razmak između linkova */
+    }
+
+    .nav-links a {
+        color: white; /* Boja teksta */
+        border: none; /* Uklanjanje ivica */
+        border-radius: 5px; /* Zaobljeni uglovi */
+        padding: 10px 20px; /* Unutrašnje podstavljanje */
+        font-size: 16px; /* Veličina fonta */
+        cursor: pointer; /* Kursor kao ruka pri hover-u */
+        transition: transform 0.1s ease, box-shadow 0.1s ease; /* Tranzicija za transformaciju i senku */
+    }
+
+    .nav-links a:hover {
+        font-size: 20px;
+        transform: scale(0.95); /* Smanjenje veličine pri pritisku */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Senka pri pritisku */
+        color: greenyellow;
+    }
+}
