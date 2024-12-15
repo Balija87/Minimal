@@ -1,19 +1,27 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  padding: 0;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-header, main, footer {
+html,
+body {
+  @apply min-h-screen bg-gray-100 text-gray-900; /* Postavlja minimalnu visinu, pozadinsku boju i boju teksta */
+  overflow-x: hidden;
+  margin: 0;
+}
+header,
+main,
+footer {
   margin: auto;
 }
 
 @media (max-width: 600px) {
   .logo {
-      width: 100px; /* Manji logo na manjim ekranima */
+    width: 100px; /* Manji logo na manjim ekranima */
   }
 
-  h1, h2, h3 {
-      font-size: smaller; /* Manji font na manjim ekranima */
+  h1,
+  h2,
+  h3 {
+    font-size: smaller; /* Manji font na manjim ekranima */
   }
 }

@@ -3,7 +3,7 @@ import './CommentBox.css'; // Stilizacija komponente
 import { FaStar } from 'react-icons/fa';
 import axios from 'axios';
 
-const CommentBox = () => {
+const CommentBox = ({ showDelete }) => {
   const [name, setName] = useState(''); // Držimo trenutni unos imena
   const [comment, setComment] = useState(''); // Držimo trenutni unos komentara
   const [comments, setComments] = useState([]); // Držimo listu svih komentara
@@ -144,12 +144,14 @@ const CommentBox = () => {
                   />
                 ))}
               </div>
-              <button
-                onClick={() => handleDelete(comment._id)}
-                className="bg-red-500 text-white p-1 rounded mt-2"
-              >
-                Obrišite
-              </button>
+              {showDelete && (
+                <button
+                  onClick={() => handleDelete(comment._id)}
+                  className="bg-red-500 text-white p-1 rounded mt-2"
+                >
+                  Obrišite
+                </button>
+              )}
             </div>
           ))
         ) : (

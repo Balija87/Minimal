@@ -6,6 +6,7 @@ footer {
 }
 
 .fixed {
+  margin-top: 20px;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -20,10 +21,6 @@ footer:not(.visible) {
 }
 
 /* Osnovni stilovi za telo stranice */
-body {
-  margin: 0;
-  padding-bottom: 60px; /* Povećajte ovo ako je footer viši */
-}
 
 /* Dodajte razmak između sadržaja i footera */
 .content {

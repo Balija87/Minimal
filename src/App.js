@@ -34,8 +34,6 @@ const App = () => {
 
   return (
     <Router>
-      {' '}
-      {/* Omotavamo celu aplikaciju u Router */}
       <div className="App">
         {loading ? (
           <div style={{ textAlign: 'center', paddingTop: '50vh' }}>
@@ -52,8 +50,13 @@ const App = () => {
               <Route path="/komentari" element={<CommentBox />} />{' '}
               {/* Stranica sa komentarima */}
               <Route path="/info" element={<Info />} />{' '}
+              {/* Stranica sa informacijama */}
+              <Route
+                path="/brisanje"
+                element={<CommentBox showDelete={true} />}
+              />{' '}
+              {/* Stranica sa mogućnošću brisanja komentara */}
             </Routes>
-
             <Footer />
           </>
         )}

@@ -1,13 +1,10 @@
-/* Osnovne stilizacije za App */
-
-
 .App {
-
   min-height: 100%; /* Osigurava da stranica zauzme najmanje visinu celog ekrana */
   margin: 0;
 }
 
-header, main {
+header,
+main {
   flex-grow: 1; /* Ove komponente treba da rastu i zauzmu raspoloživi prostor */
 }
 

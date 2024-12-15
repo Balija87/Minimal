@@ -11,12 +11,12 @@ const Header = ({ logo }) => {
 
   return (
     <header className="header" style={{ backgroundColor: colors.background }}>
-      <div className="flex items-center justify-center h-16 w-16 relative">
+      <div className="flex items-center justify-center h-16 w-16 relative logo-container">
         <div
-          className="absolute inset-0 bg-cover bg-center animate-move-in-out rounded-full"
+          className="absolute inset-0 bg-cover bg-center rounded-full logo"
           style={{
             backgroundImage: "url('/logo.png')",
-            backgroundSize: 'contain', // Osigurava da se slika vidi u celosti
+            backgroundSize: 'cover', // Osigurava da se slika vidi u celosti
             backgroundRepeat: 'no-repeat', // Sprečava ponavljanje slike
             width: '100%', // Podesite širinu na 100%
             height: '100%', // Podesite visinu na 100%

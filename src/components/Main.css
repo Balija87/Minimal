@@ -1,64 +1,67 @@
 .main-content {
-    padding: 20px;
-    font-family: Arial, sans-serif;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  bottom: 5px !important;
 }
 
-h2, h3 {
-    text-align: center;
-    margin-bottom: 20px;
+h2,
+h3 {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 p {
-    text-align: center;
-    margin-bottom: 30px;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .image-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px; /* Razmak između okvira */
-    flex-wrap: wrap; /* Omogućava prelazak u sledeći red na manjim ekranima */
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Razmak između okvira */
+  flex-wrap: wrap; /* Omogućava prelazak u sledeći red na manjim ekranima */
 }
 
 .frame {
-    width: 100%;
-    max-width: 300px; /* Maksimalna širina okvira */
-    height: 200px; /* Visina okvira */
-    border: 2px solid #333;
-    border-radius: 10px; /* Zaobljeni uglovi */
-    overflow: hidden; /* Osećaj za slike da ne izlaze iz okvira */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+  width: 100%;
+  max-width: 300px; /* Maksimalna širina okvira */
+  height: 200px; /* Visina okvira */
+  border: 2px solid #333;
+  border-radius: 10px; /* Zaobljeni uglovi */
+  overflow: hidden; /* Osećaj za slike da ne izlaze iz okvira */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 .frame img {
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover; /* Slika se automatski prilagođava u okvir */
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover; /* Slika se automatski prilagođava u okvir */
 }
 
 .frame h4 {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.6); /* Poluprovidna pozadina za tekst */
-    padding: 5px;
-    border-radius: 5px;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6); /* Poluprovidna pozadina za tekst */
+  padding: 5px;
+  border-radius: 5px;
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    .image-container {
-        justify-content: center;
-        gap: 10px; /* Manji razmak na manjim ekranima */
-    }
+  .image-container {
+    justify-content: center;
+    gap: 10px; /* Manji razmak na manjim ekranima */
+    margin-bottom: 20px;
+  }
 
-    .frame {
-        max-width: 100%; /* Na manjim ekranima, okvir se širi na celu širinu */
-        height: 180px;
-    }
+  .frame {
+    max-width: 100%; /* Na manjim ekranima, okvir se širi na celu širinu */
+    height: 180px;
+  }
 }
