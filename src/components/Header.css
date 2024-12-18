@@ -95,7 +95,7 @@ body {
   width: 35px;
   height: 16px;
   cursor: pointer;
-  z-index: 2; /* Ispred menija */
+  z-index: 101; /* Ispred menija */
   position: relative; /* Poboljšanje pozicioniranja */
 }
 
@@ -141,7 +141,7 @@ body {
     height: 100vh;
     justify-content: center;
     align-items: center;
-    z-index: 1; /* Stavite iza burger ikone */
+    z-index: 100; /* Stavite iza burger ikone */
   }
   .nav-links.active {
     display: flex;
@@ -171,5 +171,9 @@ body {
     transform: scale(0.95); /* Smanjenje veličine pri pritisku */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Senka pri pritisku */
     color: greenyellow;
+  }
+  .no-scroll {
+    overflow: hidden;
+    height: 100%;
   }
 }

@@ -4,13 +4,12 @@ import React from 'react';
 const Banner = () => {
   return (
     <div
-      className="relative h-64 bg-cover bg-center"
-      style={{ backgroundImage: "url('/grocery.jpg')" }}
+      className="relative h-96 bg-cover bg-no-repeat bg-top"
+      style={{ backgroundImage: "url('/meenar.png')" }}
     >
       <div className="absolute inset-0 flex flex-col justify-between p-4 text-white">
         <h1 className="text-sm md:text-lg lg:text-xl">Dobrodošli</h1>
         <h2 className="text-8xl md:text-4xl lg:text-8xl font-bold text-red-600 text-center relative inline-block">
-          <span className="relative z-10">Menar</span>
           <span className="absolute inset-0 text-white border-4 border-white transform scale-110 -z-10"></span>
         </h2>
 

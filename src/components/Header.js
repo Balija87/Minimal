@@ -1,13 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Header.css'; // Uvezi CSS fajl
 import colors from '../colors';
 
-const Header = ({ logo }) => {
+const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add('no-scroll');
+    } else {
+      document.body.classList.remove('no-scroll');
+    }
+  }, [isOpen]);
 
   return (
     <header className="header" style={{ backgroundColor: colors.background }}>
